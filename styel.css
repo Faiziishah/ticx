@@ -1,0 +1,111 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    /* background-color: aquamarine; */
+    background:transparent;
+    background-image: url("img/background.jpg");
+    background-size: cover;   background-repeat: no-repeat;  
+     background-attachment: fixed; position: relative;
+    height: 100vh;
+    text-align: center;
+    font-size: 30px;
+    color: #f00a0a;
+}
+.hi{
+    color: blue;
+    size: 100px;
+    background-color: aqua;
+    height: 10vh;
+    text-align: center;
+    margin: auto;
+    display: flex;
+}
+.container{
+    height: 90vh;
+    width:80% ;
+}
+.game{
+height: 30%;
+margin: 0px auto;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+gap: 1.5vmin;
+}
+.box{
+    color: rgb(16, 132, 248);
+    background-color: rgb(62, 2, 2);
+    height: 100%;
+    width: 30%;
+    border: rgb(255, 252, 252) solid 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 100px;
+    border-radius: 1rem;
+    box-shadow: 1rem rgba(252, 3, 3, 0.9);
+
+
+}
+.box.disabled {
+    pointer-events: none;
+
+    
+}
+.hide{
+    display:none;
+}
+
+
+/* .button{
+
+}
+.button:hover {background-color: #011101}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+} */
+  /* --------------for responsive */
+  @media (max-width: 768px) {
+    .game {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* Adjust for smaller screens */
+    }
+
+    .box {
+        height: 80px; /* Adjust height */
+        font-size: 1.5em; /* Adjust font size */
+    }
+
+    button {
+        font-size: 1.2em; /* Adjust button font size */
+    }
+
+    #winmsg {
+        font-size: 1.5em; /* Adjust win message font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .game {
+        grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); /* Adjust further for small screens */
+    }
+
+    .box {
+        height: 60px; /* Adjust height */
+        font-size: 1em; /* Adjust font size */
+    }
+
+    button {
+        font-size: 1em; /* Adjust button font size */
+    }
+
+    #winmsg {
+        font-size: 1.2em; /* Adjust win message font size */
+    }
+}
